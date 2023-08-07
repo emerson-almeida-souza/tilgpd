@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="bg-dark text-secondary px-4 py-5 text-center">
+  <div class="py-5">
+    <h1 class="display-5 fw-bold text-white">Mensure o nivel da segurança da informação do seu TI.</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="fs-5 mb-4">Aproximadamente 40% das empresas de pequeno e médio porte tem dificuldade com a adequação lei Nº 13.709 (Lei Geral de Proteção de Dados).
+        A TiLGPD irá apoiar seu TI para melhorar seu nível de maturidade com a LGPD nos quesitos de segurança da informação utilizando como base a norma ISO 27001.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a class="btn btn-outline-info btn-lg px-3 me-sm-3 fw-bold" href="{{url_for('questionario')}}" >Inicie o teste</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

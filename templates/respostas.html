@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block main %}
+<div style="margin: 60px 30px 0px;">
+    {%for resposta in array_questionario%}
+    {% if resposta['resposta'] == False %}
+    <div class="card text-center alert alert-danger" style="margin:30px;">
+        <div class="card-body">
+          <h5 class="card-title text-black">{{resposta['pergunta']}}</h5>
+          <h5 class="card-title btn btn-outline-dark">Requisito Não Atendido</h5>
+          <br>
+          <a href="#" class="card-link text-black">{{resposta['artigo']}}</a>
+          <a href="#" class="card-link text-black">{{resposta['iso']}}</a>
+    
+            <div class="class" role="alert">
+                <h6 class="text-black">Saiba mais em: 
+                    <a href="{{resposta['recomendacao']}}"  target="_blank" >{{resposta['recomendacao']}}</a>
+                </h6>
+                
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="card text-center alert alert-success" style="margin:30px;">
+        <div class="card-body">
+          <h5 class="card-title text-black">{{resposta['pergunta']}}</h5>
+          <h5 class="card-title btn btn-outline-dark">Requisito Atendido</h5>
+          <br>
+          <a href="#" class="card-link text-black">{{resposta['artigo']}}</a>
+          <a href="#" class="card-link text-black">{{resposta['iso']}}</a>
+    
+            <div class="class" role="alert">
+                <H6 class="text-black">Saiba mais em: 
+                    <a href="{{resposta['recomendacao']}}"  target="_blank" >{{resposta['recomendacao']}}</a>
+                </H6>
+                
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {%endfor%}
+</div>
+<div class="d-grid gap-2" style="margin: 10px;">
+    <a href="" class="btn btn-dark">Gerar PDF</a>
+  </div> 
+{% endblock %}

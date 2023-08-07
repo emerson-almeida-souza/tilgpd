@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>TiLGPD</title>
+</head>
+<body class="d-flex flex-column justify-content-between" style="height: 100vh;">
+  <header class="navbar fixed-top" style="background-color: #1F2024;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ url_for('index') }}" style="color: #fff;">TiLGPD</a>
+    </div>
+  </header>
+  {% block main %}
+  
+  {% endblock %}
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Sobre</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Código fonte do TiLGPD</a></li>
+      </ul>
+      <p class="text-center text-muted">&copy; 2022 emerson&Muari, Corp</p>
+    </footer>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
