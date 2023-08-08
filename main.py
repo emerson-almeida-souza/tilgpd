@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from banco_de_dados.dicionario import monta_array_questionario
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 array_questionario = monta_array_questionario()
 @app.route("/")
