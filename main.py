@@ -6,7 +6,7 @@ app = Flask(__name__)
 array_questionario = monta_array_questionario()
 @app.route("/")
 def index():
-    return "teste"
+    return render_template("index.html")
 @app.route("/questionario")
 def questionario():
     return render_template("questionario.html", array_questionario=array_questionario)
